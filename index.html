@@ -53,11 +53,17 @@
 </nav>
 </div>
 </header>
+<div class="container">
+	<div class="jumbotron">
+		<h2>Practice :)</h2>
+		<button id='btn1'>Wall</button>
+		<button id='btn2'>Floor</button>
+		<button id='btn3'>Flora</button>
+	</div>
 
-	<div class="container">
 <div class="row">
 <div class="col-sm-6 col-xs-12">
-<div class="panel panel-info">
+<div id="panel1" class="panel panel-info">
   <div class="panel-heading">
     <h3 class="panel-title">Wall</h3>
   </div>
@@ -69,7 +75,7 @@
 </div>
 </div>
 <div class="col-sm-3 col-xs-6">
-  <div class="panel panel-primary">
+  <div id="panel2" class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title">Floor</h3>
   </div>
@@ -81,7 +87,7 @@
 </div>
 </div> 
 <div class="col-sm-3 col-xs-6">
-  <div class="panel panel-success">
+  <div id="panel3" class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">Flora</h3>
   </div>
@@ -97,5 +103,19 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="jquery/jquery.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$('#btn1').on('click', function() {
+    			$('#panel1').fadeToggle(300);
+    		});
+    		$('#btn2').on('click', function() {
+    			$('#panel2').fadeToggle(300);
+    		});
+    		$('#btn3').on('click', function() {
+    			$('#panel3').fadeToggle(300);
+    		});
+    	});
+    </script>
 </body>
 </html>
